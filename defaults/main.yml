@@ -12,18 +12,17 @@ certbot_hsts: false
 
 # Parameters used when creating new Certbot certs.
 certbot_create_if_missing: true
-certbot_create_method: standalone
+certbot_create_method: webroot
 certbot_admin_email: akrieger@redhat.com
 
 # Default webroot, overwritten by individual per-cert webroot directories
 certbot_webroot: /var/www/letsencrypt
 
-certbot_certs: []
-# - email: janedoe@example.com
-#   webroot: "/var/www/html/"
-#   domains:
-#     - example1.com
-#     - example2.com
+certbot_certs: 
+ - email: akrieger@redhat.com
+   webroot: "/var/lib/ansible-automation-platform/eda/ui"
+   domains:
+      - eda.sandbox286.opentlc.com
 # - domains:
 #     - example3.com
 
