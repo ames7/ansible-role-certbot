@@ -49,7 +49,7 @@ certbot_create_standalone_stop_services:
   # - varnish
 
 # Available options: 'package', 'snap', 'source'.
-certbot_install_method: 'snap'
+certbot_install_method: 'source'
 
 # Source install configuration.
 certbot_repo: https://github.com/certbot/certbot.git
